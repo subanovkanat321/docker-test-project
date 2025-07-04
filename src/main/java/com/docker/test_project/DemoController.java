@@ -1,12 +1,14 @@
 package com.docker.test_project;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+@Slf4j
 @RestController
 @RequiredArgsConstructor
 public class DemoController {
@@ -15,6 +17,7 @@ public class DemoController {
 
     @GetMapping("/")
     public List<User> hello() {
+        log.info("Получение всех пользователей!!!");
         return userRepository.findAll();
     }
 
