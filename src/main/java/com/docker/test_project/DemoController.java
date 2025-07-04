@@ -25,6 +25,7 @@ public class DemoController {
     public User hello(@RequestParam("name") String name) {
         User user = new User();
         user.setName(name);
+        log.info("Сохранение нового пользователя {}", name);
         return userRepository.save(user);
     }
 }
