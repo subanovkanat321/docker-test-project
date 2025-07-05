@@ -15,6 +15,7 @@ public class DemoController {
 
     private final UserRepository userRepository;
 
+    // TODO: 7/5/2025 переделать 
     @GetMapping("/")
     public List<User> hello() {
         log.info("Получение всех пользователей!!!");
