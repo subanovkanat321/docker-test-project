@@ -9,7 +9,7 @@ class TestProjectApplicationTests {
 
 	@Test
 	void contextLoads() {
-		Assertions.assertTrue(true);
+		Assertions.assertTrue(false);
 	}
 
 }
